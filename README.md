@@ -4,7 +4,7 @@
 ![logo](/images/logo.png)
 
 The purpose of this framework is to give some basic templates and an MVVC architecture compatible with PHP 5.1.3, 
-for people that have got some knowledge in php development 
+for people that have some knowledge in php development 
 and are looking for a simple framework to study and play with.
 
 Warning : this is not a commercial framework and it must not be used in a production environment.
