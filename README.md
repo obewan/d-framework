@@ -13,8 +13,8 @@ To use it, download and extract it (or git pull it) and set it as a PHP web site
 
 Start to look at the index.php file, reads the comments, edit the files and build your own components, enjoy :). 
 
-Author : Dams 
-Website : [dams-labs](http://www.dams-labs.net)
+Author : Dams. 
+Website : [dams-labs](http://www.dams-labs.net).
 Copyright : D-Framework is under Common Creative licence [link](https://cc.ascribe.io/app/pieces/38188). Free to use for a non-commercial and personal usage.
 
 
