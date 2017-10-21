@@ -5,6 +5,8 @@
 		<title>Tabulations</title>
 		<date>01/03/2017</date>
 		<text><![CDATA[Δ-Framework got a template with tabulations.]]></text>
+		<info>With infos</info>
+		<info>and news</info>
 	</page>
 	<page>
 		<title>Accordion</title>

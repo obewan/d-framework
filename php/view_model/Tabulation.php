@@ -96,6 +96,7 @@ class Tabulation extends DataPages implements IView
             $length = 0;
             $text = "";
             $comment = "";
+            $infos = "";
             $progress = NULL;
             $abstract = "";
             
@@ -143,6 +144,22 @@ class Tabulation extends DataPages implements IView
                 $progress = $progressdata;
             }
             
+            //infos
+            $infosdata = $page->getInfos();
+            $infoNum = 0;
+            foreach ($infosdata as $infodata){
+                $listVinfo = new ListVInfo();
+                $listVinfo->load($infodata);
+                if ($infoNum == 0) {
+                    $listVinfo->setClass("alert-box success");
+                } else {
+                    $listVinfo->setClass("alert-box info");
+                }
+                
+                $infos .= $listVinfo->build();
+                $infoNum ++;
+            }
+            
             // body
             $data = array(
                 'abstract' => $abstract,
@@ -153,6 +170,7 @@ class Tabulation extends DataPages implements IView
                 'comment' => $comment,
                 'text' => $text,
                 'image' => $image,
+                'infos' => $infos,
                 'progress' => $progress
             );
             $template = new TemplateBuilder($this->viewTabContent, $data);

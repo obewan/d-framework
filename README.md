@@ -28,4 +28,3 @@ Free to use for a non-commercial and personal usage.
 * v1.2 : support for MySQL (adding MySQL basic controllers) 
 * v1.3 : TBD
 
- 
