@@ -3,9 +3,9 @@
 
 ![logo](/images/logo.png)
 
-The purpose of this framework is to give basic templates and MVVC architecture compatible with PHP 5.1.3, 
-for people that have a some knowledge in php development 
-and are looking for some basic framework to study and play with.
+The purpose of this framework is to give some basic templates and an MVVC architecture compatible with PHP 5.1.3, 
+for people that have got some knowledge in php development 
+and are looking for a simple framework to study and play with.
 
 Warning : this is not a commercial framework and it must not be used in a production environment.
 
@@ -23,7 +23,7 @@ Copyright : D-Framework is under Common Creative licence [link](https://cc.ascri
 Free to use for a non-commercial and personal usage.
 
 ## Roadmap 
-* v1.0 : initial version **current version**
+* v1.0 : initial version **[current version]**
 * v1.1 : support for Zurb Foundation 6
 * v1.2 : support for MySQL (adding MySQL basic controllers) 
 * v1.3 : TBD
