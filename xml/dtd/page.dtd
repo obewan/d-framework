@@ -1,0 +1,29 @@
+<!ELEMENT pages (page*)>
+<!ELEMENT page (title,icon?,author?,date?,image?,screen*,abstract?,comment?,progress?, formula*, text*, include?, chapter*,info*)>
+<!ELEMENT chapter (title,author?,date?,image?,screen*,abstract?,comment?,progress?,(formula*|text*|include),info*)>
+<!ELEMENT screen (thumb,big)>
+<!ELEMENT formula (quote,cite?,comment?)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT icon (#PCDATA)>
+
+<!ELEMENT thumb (#PCDATA)>
+<!ELEMENT big (#PCDATA)>
+
+<!ELEMENT abstract (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>
+<!ELEMENT progress (#PCDATA)>
+<!ELEMENT include (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT quote (#PCDATA)>
+<!ELEMENT cite (#PCDATA)>
+
+<!ATTLIST page type (article|book|website|report|software|tip) #IMPLIED>
+<!ATTLIST info date CDATA #IMPLIED>
+<!ATTLIST info scale (small|normal|large) #IMPLIED>
+<!ATTLIST formula name CDATA #IMPLIED>

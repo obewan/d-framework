@@ -1,0 +1,19 @@
+<!ELEMENT menu (title, group+)>
+<!ELEMENT group (title?,section*)>
+<!ELEMENT section (title?,action?,src?,subsection*,icon?)>
+<!ELEMENT subsection (title?,action?,src?,(subsection*|page*),icon?)>
+<!ELEMENT page (title?,action?,src?,icon?)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT src (#PCDATA)>
+<!ELEMENT action (#PCDATA)>
+<!ELEMENT icon (#PCDATA)>
+
+<!ATTLIST menu lang (eng|fr|du|jp|ch|ru|gr) "eng">
+<!ATTLIST section access (all|user|superuser|admin) #IMPLIED>
+<!ATTLIST section window (page|modal) #IMPLIED>
+<!ATTLIST section default (true|false) #IMPLIED>
+<!ATTLIST subsection access (all|guest|user|manager|admin) #IMPLIED>
+<!ATTLIST subsection direction (horizontal|vertical) #IMPLIED>
+<!ATTLIST subsection window (page|modal) #IMPLIED>
+<!ATTLIST page window (page|modal) #IMPLIED>

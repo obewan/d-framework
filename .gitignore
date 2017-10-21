@@ -1,0 +1,8 @@
+*.swp
+*~
+*.log
+*.browsersim
+.project
+.settings
+.buildpath
+

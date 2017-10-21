@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu SYSTEM "./dtd/menu.dtd">
+<!-- info : menu is subdivised with group / section / [subsection / subsection...] ... see the menu.dtd 					-->
+<!--      : the menu title is the mandatory main title  																	-->
+<!--      : group, section and subsection can have icon, title, 															--> 
+<!--	  : and final buttons must have an src (source name of file for example, without extension, depending of your controller) and/or an action (for ajax calls)  -->
+<menu lang="eng">
+	<title>Δ-Framework</title>
+	<group>
+		<title>Group 1</title>
+		<!--  info : section can have attributes like default (default active page on first visite), access, window (for modal popups)... see the menu.dtd -->
+		<section default="true">
+			<title>Home</title>
+			<src>pages</src>
+			<icon>fi-home</icon>
+		</section>
+		<section>
+			<title>Menu</title>
+			<subsection>
+				<title>Examples</title>
+				<page>
+					<title>Tabulations</title>
+					<src>examples</src>
+				</page>
+				<page>
+					<title>Accordion</title>
+					<src>examples</src>
+				</page>
+			</subsection>
+			<subsection>
+				<title>Others</title>
+				<page>
+					<title>List</title>
+					<src>examples</src>
+				</page>
+				<page>
+					<title>Magellan</title>
+					<src>examples</src>
+				</page>
+				<page window="modal">
+					<title>Modal</title>
+					<src>examples</src>
+				</page>
+			</subsection>
+			<icon>fi-shopping-cart</icon>
+		</section>	
+	</group>
+	<group>
+		<title>Group 2</title>	
+		<section window="modal">
+			<title>Login</title>
+			<action>login</action>
+			<icon>fi-lock</icon>
+		</section>
+		<section window="modal">
+			<title>About</title>
+			<action>about</action>
+			<src>pages</src>
+			<icon>fi-info</icon>
+		</section>
+	</group>
+</menu>
+
+			
+				

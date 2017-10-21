@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pages SYSTEM "./dtd/page.dtd">
+<pages>
+	<page>
+		<title>Home</title>
+		<include>home.html</include>
+		<info date="21/10/2017">
+			<![CDATA[You can customize this framewok as you want and create your own components.]]>
+		</info>	
+		<info date="21/10/2017">
+			<![CDATA[You can test the login with the user "test" and password "test". Edit the ".users.xml" hidden file in the xml directory for your needs, and edit the LoginController for more secure controls (this is just a basic login controller).]]>
+		</info>	
+		<info date="21/10/2017">
+			<![CDATA[Start by looking at the index.php file. The ViewController is the central controller that will build the ViewLayout using a XML data sources managed by the XMLDataController. You can create and use your own DataController instead of the XMLDataController, and your own ViewControllers too.]]>				
+		</info>
+		<info date="21/10/2017">
+			<![CDATA[This is the MVVC (ModelView View Controller) design pattern. the ModelView will fill the View pages with data collected by the Model. The Controllers are in front of the server (and the client for Ajax js controllers) and will calls the ModelViews to send back the final rendered html page. ]]>				
+		</info>	
+		<info date="21/10/2017">
+			<![CDATA[Create and add your own PhpControllers and AjaxControllers, in the php/controller directory. 
+			Edit the damsController.js in the js/controller directory for your Ajax modals.]]>
+		</info>		
+		<info date="21/10/2017">
+			<![CDATA[Create your own View templates in the view directory and view models that will call them. ]]>
+		</info>		
+		<info date="21/10/2017">
+			<![CDATA[Create your own Data sources in the data_model directory that extends DataMenu and DataPages, like in DataMenuXML and DataPagesXML. ]]>
+		</info>
+		<info date="21/10/2017">
+			<![CDATA[This Δ-Framework version use Zurb-Foundation 5.5.3 as javascript UI library, but you are free to use any other library, by editing or adding new view templates in the view directory (see the layout.phtml) ]]>
+		</info>
+		<info date="21/10/2017">
+			<![CDATA[Happy coding :)]]>
+		</info>		
+	</page>
+	<page>
+		<title>About</title>
+		<icon>fi-info</icon>
+		<include>about.htm</include>	
+	</page>
+</pages>

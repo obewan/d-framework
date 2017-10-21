@@ -1,0 +1,25 @@
+<div class="content <?= $active ?>" id="<?= $tab_id ?>">
+
+<?= !empty($screens) ? 
+"<ul data-clearing class='clearing-thumbs small-block-grid-" . $length . "'>"
+		. $screens . "</ul>" : "" ?>
+	<div>
+	<?= !empty($abstract) ? "<span class='label'>".$abstract."</span>" : "" ?>
+
+		<div class="panel clearfix">
+			<?= !empty($image) ? "<span class='left round' style='margin:10px;'><img src='".$image."'></span>" : "" ?>
+			<?= !empty($comment) ? "<div style='margin:10px;'>".$comment."</div><hr>" : "" ?>
+		
+			<div style="margin:10px;"><?= $text ?></div>
+			
+			<?= isset($progress) && $progress != NULL ? 
+			"<hr><span class='subheader' style='padding-bottom:10px;'>Current progress</span>" .
+			"<div class='progress'>" .
+			"<span class='meter green' style='width:". $progress ."%'>" .
+			"<p class='percent'>".$progress."%</p>".
+			"</span>".
+			"</div>" : "" ?>
+		</div>
+	</div>
+
+</div>

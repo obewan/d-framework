@@ -1,0 +1,7 @@
+<!ELEMENT users (user*)>
+<!ELEMENT user (name,password)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ATTLIST user role (admin|manager|user|guest) #REQUIRED>
+<!ATTLIST user enable (true|false) #REQUIRED>
+

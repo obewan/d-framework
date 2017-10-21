@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE users SYSTEM "./dtd/users.dtd">
+<users>
+    <user role="user" enable="true">
+        <name>test</name>
+	<password>1278632148c3479c28ead83ebcf2f3f3e816e7209aded2c79713041cd11329c7</password>
+    </user>
+</users>

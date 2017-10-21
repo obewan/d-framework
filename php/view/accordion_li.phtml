@@ -1,0 +1,15 @@
+<li class="accordion-navigation" <?= !empty($li_data) ? $li_data : "" ?> >
+	<a id="<?= $a_id ?>" href="#<?= $div_id ?>" name="<?= $div_id ?>">
+	<?= $title ?>
+	<span class="subheader right"><?= !empty($date) ? $date : "" ?></span>
+	<span class="subheader right">
+		<?= !empty($type) ? $type . "&bullet;&nbsp; " : "" ?>
+	</span>
+	</a>
+	
+	<div id="<?= $div_id ?>" class="content">
+		<?= !empty($formula) ? $formula : "" ?>
+			
+		<?= $text ?>
+	</div>	
+</li>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+    <head>
+        <title><?= $title ?></title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />                
+        <meta name="Description" content="D-Framework : a simple PHP framework"/>
+        <meta name="keywords" lang="eng" content="D-framework"/>
+        <meta http-equiv="Content-Language" content="eng"/>
+        <link rel="stylesheet" type="text/css" href="css/foundation.css"/>
+        <link rel="stylesheet" type="text/css" href="css/foundation-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="css/form/dams-style.css"/>
+        <script src="js/modules/jsSha2/sha256.js"></script>
+        <script src="js/vendor/modernizr.js"></script>    			
+    </head>
+
+    <body>
+        <!-- Menu -->
+        <?= $menu ?>
+        
+        <!-- Modal -->
+        <div id="modal"></div>
+
+        <!-- Content -->
+        <div id="div_page" class="row top">
+        <?= $content ?>
+        </div>
+
+        <!-- JS script -->
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/fastclick.js"></script>
+        <script src="js/foundation.min.js"></script>         
+        <script src="js/controller/damsController.js"></script>
+        <script>
+          $(document).foundation({
+        	accordion: {
+        		callback : function(acc){
+        			var containerPos = $(acc).parent().offset().top - $(".top-bar").height() - 100;
+        			$("html, body").animate({ scrollTop: containerPos }, 600);
+        		},
+        		"magellan-expedition": {        		
+        		offset_by_height: true
+        		}
+        	}
+        });
+
+        $(document).dams();
+        </script>
+    </body>
+</html>

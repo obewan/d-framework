@@ -1,0 +1,138 @@
+@background-alert-box: #f7f7f7;
+@green: #2eCc71;
+@grey: #e5e5e5;
+@greenlight: #5eFcA1;
+@primary: #2ba6cb;
+@primary-hover: #0984a9;
+@dark: #333333;
+
+/*** PANELS ***/
+.top {
+    margin-top:1.3rem;                                                                                                                     
+}     
+.sub-top {
+    margin-top:2rem;
+}
+.sticky {
+  	position: relative;
+  	top: 0;
+}    
+.button.close-reveal-modal {
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+    font-weight: normal !important;
+    font-size: 0.8125rem !important;
+    color: white !important;
+    line-height: normal !important;
+}
+
+/*** TABS ***/
+.tabs .tab-title > a {
+    outline: none;
+    background: @dark;
+    color: white;
+    height: 2rem;
+    line-height: 0.0rem !important;
+}
+.tabs .tab-title.active > a,
+.tabs .tab-title > a:focus {
+    background: @primary;
+    color: white;
+}
+.tabs .tab-title > a:hover {
+    background: black;
+    color: white;
+}
+.tabs .tab-title.active > a:hover {
+    background: @primary-hover;
+}
+
+
+/*** ALERTS BOX ***/
+.alert-box {
+    background: @background-alert-box;
+    color: #333;
+    border: none;
+    border-left: 6px solid #008CBA;
+    box-shadow: 0 5px 8px -6px rgba(0, 0, 0, 0.2); 
+}
+
+.alert-box.success {
+    background: @background-alert-box;
+    color: #333; 
+}
+
+.alert-box.alert {
+    background: @background-alert-box;
+    color: #333; 
+}
+
+.alert-box.warning {
+    background: @background-alert-box;
+    color: #333; 
+}
+
+.alert-box.info {
+    background: @background-alert-box;
+    color: #333; 
+}
+
+.alert-box.small {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem; 
+}
+
+.alert-box.small .close {
+    font-size: 1.5rem; 
+}
+
+.alert-box.large {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2rem; 
+}
+
+.alert-box.large .close {
+    font-size: 3rem; 
+}
+
+.alert-box .close {
+    font-size: 2rem;
+    line-height: 1.25rem; 
+}
+
+/*** Progress bar ***/
+.progress {
+    margin: 0 auto 2rem auto;
+    padding: 0;
+    width:100%;
+    height:1.3em;
+    overflow: hidden;
+    background: @grey;
+    border-radius: 6px;
+}
+.percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: tahoma,arial,helvetica;
+    font-size:0.8em;
+    color: white !important;
+}
+
+.meter {
+    position: relative;
+    float: left;
+    min-width: 1%;
+    height: 100%;
+}
+
+/*** special colors ***/
+.green {
+    background: @green !important;
+    color: white !important;
+}

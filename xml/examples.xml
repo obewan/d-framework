@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pages SYSTEM "./dtd/page.dtd">
+<pages>
+	<page>
+		<title>Tabulations</title>
+		<date>01/03/2017</date>
+		<text><![CDATA[Δ-Framework got a template with tabulations.]]></text>
+	</page>
+	<page>
+		<title>Accordion</title>
+		<date>01/02/2017</date>
+		<text><![CDATA[Δ-Framework got a template with accordion.]]></text>
+	</page>
+	<page>
+		<title>Magellan</title>
+		<date>01/02/2017</date>
+		<text><![CDATA[Δ-Framework got a template with magellan accordion.]]></text>
+		<chapter>
+			<title>Accordion chapter 1</title>
+			<text>This is a nice text.</text>				
+		</chapter>
+		<chapter>
+			<title>Accordion chapter 2</title>
+			<text>This text is better.</text>				
+		</chapter>
+		<chapter>
+			<title>Accordion chapter 3</title>
+			<text>Amazing text.</text>				
+		</chapter>
+	</page>
+	<page type="article">
+		<title>List</title>
+		<date>01/01/2017</date>
+		<text><![CDATA[Δ-Framework got a template with list.]]></text>
+		<text><![CDATA[List can list infos too.]]></text>
+		<info scale="small">This info will be listed at first</info>
+		<info scale="small">This info will be listed at second</info>
+		<info scale="small">This info will be listed at third</info>
+	</page>
+	<page>
+		<title>Modal</title>
+		<icon>fi-lightbulb</icon>
+		<date>01/01/2017</date>
+		<text><![CDATA[Δ-Framewok got modals too.]]></text>
+		
+	</page>
+</pages>
