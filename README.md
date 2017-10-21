@@ -9,7 +9,7 @@ and are looking for a simple framework to study and play with.
 
 Warning : this is not a commercial framework and it must not be used in a production environment.
 
-To use it, download and extract it (or git pull it) and set it as a PHP web site.
+To use it, download and extract it (or git clone it) and set it as a PHP web site.
 
 Start to look at the index.php file, reads the comments, edit the files and build your own components, enjoy :). 
 
