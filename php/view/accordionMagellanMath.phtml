@@ -1,16 +1,25 @@
 
+<div class="grid-x" id="div_grid">
+
 <!-- foundation magellan sticky helper -->
-<div data-magellan-expedition="fixed">
-    <dl class="sub-nav sub-top">
+<div class="cell small-3 large-2" data-sticky-container id="stick_panel">
+<div data-sticky data-anchor="div_grid">
+<ul class="vertical menu" data-magellan>   
         <?= $magellan_dd ?>
-    </dl>
+</ul>
+</div>
 </div>
 
+
 <!-- accordion panel -->
-<div class="small-12 columns">
-    <ul class="accordion" data-accordion>
-        <?= $accordion_li ?>
-    </ul>
+<div class="cell small-9 large-10" id="acc_panel">
+<ul class="accordion" data-accordion>
+   <?= $accordion_li ?>
+</ul>
+</div>
+
+
+
 </div>
 
 

@@ -26,5 +26,3 @@ class Content implements IView
     }
 }
 
-?>
-

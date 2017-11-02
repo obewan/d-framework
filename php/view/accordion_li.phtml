@@ -1,13 +1,15 @@
-<li class="accordion-navigation" <?= !empty($li_data) ? $li_data : "" ?> >
-	<a id="<?= $a_id ?>" href="#<?= $div_id ?>" name="<?= $div_id ?>">
+<li id="<?= $li_id ?>" class="accordion-item" <?= !empty($li_data) ? $li_data : "" ?> data-accordion-item>
+
+	<a id="<?= $a_id ?>" href="#<?= $div_id ?>"  class="accordion-title">
 	<?= $title ?>
-	<span class="subheader right"><?= !empty($date) ? $date : "" ?></span>
-	<span class="subheader right">
-		<?= !empty($type) ? $type . "&bullet;&nbsp; " : "" ?>
+	<span class="subheader float-right" style="margin-right:2rem;">
+		<?= !empty($type) ? ucfirst($type) : "" ?>
+		<?= !empty($type) && !empty($date)? " &nbsp;&bullet;&nbsp; " : "" ?>
+		<?= !empty($date) ? $date : "" ?>		
 	</span>
 	</a>
 	
-	<div id="<?= $div_id ?>" class="content">
+	<div id="<?= $div_id ?>" class="accordion-content" data-tab-content>
 		<?= !empty($formula) ? $formula : "" ?>
 			
 		<?= $text ?>

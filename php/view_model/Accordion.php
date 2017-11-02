@@ -127,6 +127,7 @@ class AccordionPage extends DataPage implements IView
     {
         $a_id = "a_" . $this->num;
         $div_id = "div_" . $this->num;
+        $li_id = "li_" . $this->num;
         
         $title = ucfirst($this->page->getTitle());
         
@@ -152,13 +153,16 @@ class AccordionPage extends DataPage implements IView
             }
         }
         
+        $type = $this->page->getType();
+        
         $data = array(
             'a_id' => $a_id,
+            'li_id' => $li_id,
             'div_id' => $div_id,
             'date' => $date,
+            'type' => $type,
             'title' => $title,
-            'text' => $text
-        
+            'text' => $text        
         );
         $template = new TemplateBuilder($this->viewPage, $data);
         

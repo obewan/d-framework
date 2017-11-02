@@ -86,20 +86,20 @@ class ListV extends DataPage implements IView
             $textsData .= $template->build();           
         }
         
-        $infosData = "";
-        $infos = $this->page->getInfos();
+        $infos = "";
+        $infosData = $this->page->getInfos();
         $infoNum = 0;
-        foreach ($infos as $info) {
+        foreach ($infosData as $info) {
             $listVinfo = new ListVInfo();
             $listVinfo->load($info);
             
             if ($infoNum == 0) {
-                $listVinfo->setClass("alert-box success");
+                $listVinfo->setClass("success");
             } else {
-                $listVinfo->setClass("alert-box info");
+                $listVinfo->setClass("primary");
             }
             
-            $infosData .= $listVinfo->build();
+            $infos .= $listVinfo->build();
             $infoNum ++;
         }
         
@@ -112,7 +112,7 @@ class ListV extends DataPage implements IView
             'title' => $title,
             'icon'  => $icon,
             'texts' => $textsData,
-            'infos' => $infosData
+            'infos' => $infos
         );
         if ($this->isModal) {
             $template = new TemplateBuilder($this->viewModal, $data);

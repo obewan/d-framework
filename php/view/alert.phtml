@@ -1,6 +1,10 @@
-<div data-alert class="<?= $info->getClass() ?>">
+<div data-closable class="callout small <?= $info->getClass() ?>">
 		<h6 class="subheader">
 			<?= $info->getText() ?>
 		</h6>		
-		<span class="close"> <small><?= $info->getDate() != null ? $info->getDate() : "" ?></small> <a href="#">&minus;</a></span>		
+	
+		<button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+			<small><?= $info->getDate() != null ? $info->getDate() : "" ?></small>
+			<span> &minus;</span>
+		</button>		
 </div>

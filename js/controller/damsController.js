@@ -1,7 +1,7 @@
 /*****************************************************************************
- * Ajax controler for dams-labs.net 
+ * Ajax controler for d-framework 
  * author : dams
- * Dams Technology Copyright © 2014-3018. 
+ * Dams Technology Copyright © 2014-3018 www.dams-labs.net 
  *****************************************************************************/
 
 
@@ -29,11 +29,13 @@
             method: "POST",
             data : { action : 'showLogin' }
         })
-        .success(function(data){
+        .done(function(data){
             if(data !== undefined && data !== null){
             	$modal.html(data);
                 setEnterKey();
-                $('#modal_content').foundation('reveal', 'open');
+                //init the modal (ZF6)
+                var $modalContent = new Foundation.Reveal($('#modal_content'));
+                $modalContent.open();
             }
         });
     };
@@ -45,11 +47,13 @@
             method: "POST",
             data : { action : 'showAbout' }
         })
-        .success(function(data){
+        .done(function(data){
             if(data !== undefined && data !== null){
             	$modal.html(data);
                 setEnterKey();
-                $('#modal_content').foundation('reveal', 'open');
+                //init the modal (ZF6)
+                var $modalContent = new Foundation.Reveal($('#modal_content'));
+                $modalContent.open();
             }
         });
     };
@@ -61,11 +65,13 @@
             method: "POST",
             data : { action : 'showExample' }
         })
-        .success(function(data){
+        .done(function(data){
             if(data !== undefined && data !== null){
             	$modal.html(data);
                 setEnterKey();
-                $('#modal_content').foundation('reveal', 'open');
+                //init the modal (ZF6)
+                var $modalContent = new Foundation.Reveal($('#modal_content'));
+                $modalContent.open();
             }
         });
     };
@@ -104,7 +110,7 @@
                 data : data.value
             }
         })
-        .success(function(data){
+        .done(function(data){
             //receiving
             if(data !== undefined && data !== null){
                 if(data.code !== undefined && data.code === CODE_SUCCESS){
@@ -123,14 +129,14 @@
                 }
             }
         })        
-        .error(function(jqXHR, textStatus, errorThrown){
+        .fail(function(jqXHR, textStatus, errorThrown){
             //receiving error
             var messageHtml = "<span class='error'>" 
                 + textStatus + " : " 
                 + errorThrown + "</span>";
             $messageBox.html(messageHtml);
         })        
-        .complete(function(){
+        .always(function(){
             //cleaning
             user.value = '';
             pwd.value = '';
@@ -148,7 +154,7 @@
             dataType: 'json',
             data : { action : 'logout' }
         })
-        .complete(function(){
+        .always(function(){
             document.location.href = "/";
         });
 

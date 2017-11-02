@@ -78,7 +78,7 @@ class Tabulation extends DataPages implements IView
             $title = $page->getTitle();
             $active = "";
             if ($title == $this->title) {
-                $active = "active";
+                $active = "is-active";
             }
             
             // build tabs titles
@@ -99,6 +99,7 @@ class Tabulation extends DataPages implements IView
             $infos = "";
             $progress = NULL;
             $abstract = "";
+            $orbitBullets = "";
             
             // abstract
             $abstractdata = $page->getAbstract();
@@ -108,6 +109,7 @@ class Tabulation extends DataPages implements IView
             
             // screenshots
             $screensdata = $page->getScreens();
+            $screenNumber = 0;
             foreach ($screensdata as $screen) {
                 $big_src = $this->imagesPath . $screen->getBig();
                 $thumb_src = $this->imagesPath . $screen->getThumb();
@@ -117,6 +119,9 @@ class Tabulation extends DataPages implements IView
                 );
                 $template = new TemplateBuilder($this->viewTabScreen, $data);
                 $screens .= $template->build();
+          
+                $orbitBullets .= '<button data-slide="'. $screenNumber . '"><span class="show-for-sr"></span></button>';
+                $screenNumber++;
             }
             $length = count($screensdata);
             
@@ -151,9 +156,9 @@ class Tabulation extends DataPages implements IView
                 $listVinfo = new ListVInfo();
                 $listVinfo->load($infodata);
                 if ($infoNum == 0) {
-                    $listVinfo->setClass("alert-box success");
+                    $listVinfo->setClass("success");
                 } else {
-                    $listVinfo->setClass("alert-box info");
+                    $listVinfo->setClass("primary");
                 }
                 
                 $infos .= $listVinfo->build();
@@ -167,6 +172,7 @@ class Tabulation extends DataPages implements IView
                 'tab_id' => $tab_id,
                 'screens' => $screens,
                 'length' => $length,
+                'orbitBullets' => $orbitBullets,
                 'comment' => $comment,
                 'text' => $text,
                 'image' => $image,

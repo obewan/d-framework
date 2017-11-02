@@ -1,13 +1,33 @@
-<div class="content <?= $active ?>" id="<?= $tab_id ?>">
+<div class="tabs-panel <?= $active ?>" id="<?= $tab_id ?>">
 
-<?= !empty($screens) ? 
-"<ul data-clearing class='clearing-thumbs small-block-grid-" . $length . "'>"
-		. $screens . "</ul>" : "" ?>
 	<div>
-	<?= !empty($abstract) ? "<span class='label'>".$abstract."</span>" : "" ?>
+		<?= !empty($abstract) ? "<span class='label'>".$abstract."</span>" : "" ?>
 
-		<div class="panel clearfix">
-			<?= !empty($image) ? "<span class='left round' style='margin:10px;'><img src='".$image."'></span>" : "" ?>
+		<div class="callout">
+		
+		<?= !empty($screens) ? 
+	   '<div class="orbit" role="region" aria-label="Screenshots" data-orbit>' .
+	   '<div class="orbit-wrapper">' . PHP_EOL .
+	   
+	   '<div class="orbit-controls">' .
+	   '<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>' .
+	   '<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>' .
+	   '</div>' .  PHP_EOL .
+	   
+	   '<ul class="orbit-container">' .
+		 $screens  .
+		 '</ul>' .  PHP_EOL .
+	   
+		'<nav class="orbit-bullets">' .
+		 $orbitBullets .
+		'</nav>' . PHP_EOL . 
+		 
+	   '</div>' .
+	   '</div>'
+        : "" ?>
+        
+			<?= !empty($image) && empty($screens) ? "<span class='left round' style='margin:10px;'><img src='".$image."'></span>" : "" ?>
+			
 			<?= !empty($comment) ? "<div style='margin:10px;'>".$comment."</div><hr>" : "" ?>
 		
 			<div style="margin:10px;"><?= $text ?></div>

@@ -62,8 +62,8 @@ class AccordionMagellan extends DataPage implements IView
         $id = 0;
         foreach ($chapters as $chapter) {
             $title = $chapter->getTitle();
-            $div_id = "div_" . $id;
-            $magellan_dd .= '<dd data-magellan-arrival="' . $div_id . '"><a href="#' . $div_id . '">' . $title . '</a></dd>' . PHP_EOL;
+            $div_id = "li_" . $id;
+            $magellan_dd .= '<li><a href="#' . $div_id . '">' . $title . '</a></li>' . PHP_EOL;
             $id ++;
         }
         
@@ -167,6 +167,7 @@ class AccordionChapter extends DataChapter implements IView
     {
         $a_id = "a_" . $this->num;
         $div_id = "div_" . $this->num;
+        $li_id = "li_" . $this->num;
         
         $title = $this->getTitle();
         
@@ -196,10 +197,11 @@ class AccordionChapter extends DataChapter implements IView
         
         $date = $this->chapter->getDate();
         
-        $li_data = "data-magellan-destination='" . $div_id . "'";
+        $li_data = "data-magellan-target='" . $li_id . "'";
         
         $data = array(
             'li_data' => $li_data,
+            'li_id' => $li_id,
             'a_id' => $a_id,
             'div_id' => $div_id,
             'date' => $date,

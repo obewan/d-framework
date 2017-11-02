@@ -1,60 +1,63 @@
-<div id="modal_content" class="reveal-modal tiny" data-reveal aria-labelledby="login" aria-hidden="true" role="dialog">
+<div id="modal_content" class="reveal tiny" data-reveal aria-labelledby="login" aria-hidden="true" role="dialog">
 <form id="login_form" name="login_form" encType="multipart/form-data" action="" method="POST">
-    <div class="large-12 columns">
-        <h3 class="subheader"><i class="fi-lock"></i> Login</h3>
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<h3 class="subheader">
+					<i class="fi-lock"></i> Login
+				</h3>
 
-        <!-- Login message -->
-        <div class="row">
-            <div id="login_notification"></div>
-        </div>
+				<!-- Login message -->
+				<div class="cell">
+					<div id="login_notification"></div>
+				</div>
+				
+				
+				<div class="cell">
+					<div class="callout">
+						<!-- User Name -->
+						<div class="input-group">
+							<span class="input-group-label green"><i class="fi-torso"></i></span>
+							<input type="text" class="input-group-field" size="30"
+								name="username" id="username" required maxlength="30"
+								placeholder="user name" />
+						</div>
 
-        <div class="panel radius">
-
-            <!-- User Name -->
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="row collapse prefix-radius">
-                        <div class="small-4 columns">
-                            <span class="prefix green"><i class="fi-torso"></i></span>
-                        </div>
-                        <div class="small-8 columns">
-                            <input type="text" size="30" name="username" id="username" required  maxlength="30" placeholder="user name"/>
-                        </div> 
-                    </div>         
-                </div>
-            </div>
-
-            <!-- Password Name -->
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="row collapse prefix-radius">
-                        <div class="small-4 columns">
-                            <span class="prefix green"><i class="fi-key"></i></span>
-                        </div>
-                        <div class="small-8 columns">
-                            <input type="password" size="30" name="password" id="password" required  maxlength="30" placeholder="password"/>
-                        </div>
-                    </div>
-                </div> 
+						<!-- Password Name -->
+						<div class="input-group">
+							<span class="input-group-label green"><i class="fi-key"></i></span>
+							<input type="password" class="input-group-field" size="30"
+								name="password" id="password" required maxlength="30"
+								placeholder="password" />
+						</div>                
                 <?//special data hidden input (to send crypted data package without ssl)?>
-                <input type="hidden" name="data" id="data"/>
-            </div>
-        </div>
+                <input type="hidden" name="data" id="data" />
 
-        <!-- submit button -->
-        <div class="row">
-            <div class="large-12 columns">
-                <ul class="button-group round right">
-                    <li>
-                        <button class="close-reveal-modal small button" name="close" id="close"><i class="fi-x"></i> Cancel</button>
-                    </li>
-                    <li>
-                        <button type="submit" class="small button" name="submit" id="submit"><i class="fi-check"></i> Submit</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</form>
-<a class="close-reveal-modal" aria-label="close">&bull;</a>
+					</div>
+				</div>
+
+				<!-- submit button -->
+				<div class="cell">
+					<div class="grid-x grid-padding-x align-right">
+						<div class="cell small-4">
+							<div class="button-group round">
+								<button class="small button" data-close name="close"
+									id="close">
+									<i class="fi-x"></i> Cancel
+								</button>
+								<button type="submit" class="small button" name="submit"
+									id="submit">
+									<i class="fi-check"></i> Submit
+								</button>
+							</div>
+						</div>
+						<div class="cell small-1"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</form>
+<button class="close-button" data-close aria-label="Close modal" type="button">
+	<span aria-hidden="true">&bull;</span>
+</button>
 </div>

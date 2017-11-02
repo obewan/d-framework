@@ -1,13 +1,10 @@
-<div id="modal_content" class="reveal-modal medium" data-reveal aria-hidden="true" role="dialog">
-
-<div class="small-12 columns">
-	<?= !empty($title) ? "<h3 class='subheader'>":"" ?>
-	<?= !empty($icon) ? "<i class='".$icon."'></i> " : "" ?>
-	<?= !empty($title) ? $title."</h3>" : "" ?>	
-	
-	<?= !empty($include) ? "<div class='panel radius'>".$include."</div>" : "" ?>
- 	<?= $texts ?>
+<div id="modal_content" class="reveal large" data-reveal aria-hidden="true" role="dialog">
+	<div class="callout">
+		<?= $include ?>
+		<?= $texts ?>
+	</div>
 	<?= $infos ?>
-</div>
-<a class="close-reveal-modal" aria-label="close">&bull;</a>
+	<button class="close-button" data-close aria-label="Close modal" type="button">
+		<span aria-hidden="true">&bull;</span>
+	</button>
 </div>

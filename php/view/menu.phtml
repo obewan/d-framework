@@ -1,19 +1,21 @@
 
-<div class="fixed">
-    <nav class="top-bar" data-topbar role="navigation">
-        <!-- top-bar title -->
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="/"><?= $title ?></a></h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
 
-        <!-- top-bar section -->
-        <section class="top-bar-section">
-            <ul class="right">
+<div class="title-bar" data-responsive-toggle="responsive-menu"	data-hide-for="medium">
+	<button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+	<div class="title-bar-title"><?= $title ?></div>
+</div>
+
+<div class="top-bar" data-data-sticky id="responsive-menu">
+	<!-- top-bar title -->
+	<div class="title-bar-left show-for-medium">
+		<span class="title-bar-title"><a href="/"><?= $title ?></a></span>
+	</div>
+
+	<!-- top-bar section -->
+	<div class="top-bar-right">
+		<ul class="vertical medium-horizontal menu"
+			data-responsive-menu="accordion medium-dropdown">
                 <?= $menu ?>
             </ul>
-        </section>
-    </nav>
+	</div>
 </div>

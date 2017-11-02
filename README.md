@@ -18,13 +18,13 @@ Author : Dams.
 
 Website : [dams-labs](http://www.dams-labs.net).
 
-Copyright : D-Framework is under Common Creative licence [link](https://cc.ascribe.io/app/pieces/38188). 
+Copyright : D-Framework is under [Common Creative licence](https://cc.ascribe.io/app/pieces/38188). 
 
 Free to use for a non-commercial and personal usage.
 
 ## Roadmap 
-* v1.0 : initial version **[current version]**
-* v1.1 : support for Zurb Foundation 6
+* v1.0 : initial version 
+* v1.1 : support for Zurb Foundation 6 **[current version]**
 * v1.2 : support for MySQL (adding MySQL basic controllers) 
 * v1.3 : TBD
 
