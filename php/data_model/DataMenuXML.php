@@ -45,11 +45,13 @@ class DataMenuXML extends DataMenu
             $this->setTitle($titleStr);
         }
         
-        $groups = $menu->childNodes;
+        $groups = $menu->getElementsByTagName(MENU_GROUP_ELT);
         foreach ($groups as $group) {
-            $groupXML = new DataMenuGroupXML();
-            $groupXML->load($group);
-            $this->addGroup($groupXML);
+            if ($group->nodeType == XML_ELEMENT_NODE) {
+                $groupXML = new DataMenuGroupXML();
+                $groupXML->load($group);
+                $this->addGroup($groupXML);
+            }
         }
         
         return true;
@@ -77,12 +79,14 @@ class DataMenuGroupXML extends DataMenuGroup
             $titleStr = $title->item(0)->nodeValue;
             $this->setTitle($titleStr);
         }
-        
-        $sections = $node->childNodes;
+                
+        $sections = $node->getElementsByTagName(MENU_SECTION_ELT);
         foreach ($sections as $section) {
-            $sectionXML = new DataMenuSectionXML();
-            $sectionXML->load($section);
-            $this->addSection($sectionXML);
+            if ($section->nodeType == XML_ELEMENT_NODE) {
+                $sectionXML = new DataMenuSectionXML();
+                $sectionXML->load($section);
+                $this->addSection($sectionXML);
+            }
         }
     }
 
@@ -194,9 +198,11 @@ class DataMenuSectionXML extends DataMenuSection
         
         $subsections = $node->getElementsByTagName(MENU_SUBSECTION_ELT);
         foreach ($subsections as $subsection) {
-            $subsectionXML = new DataMenuSubSectionXML();
-            $subsectionXML->load($subsection);
-            $this->addSubSection($subsectionXML);
+            if ($subsection->nodeType == XML_ELEMENT_NODE) {
+                $subsectionXML = new DataMenuSubSectionXML();
+                $subsectionXML->load($subsection);
+                $this->addSubSection($subsectionXML);
+            }
         }
     }
 
@@ -234,16 +240,20 @@ class DataMenuSubSectionXML extends DataMenuSubSection
         
         $pages = $node->getElementsByTagName(MENU_PAGE_ELT);
         foreach ($pages as $page) {
-            $pageXML = new DataMenuPageXML();
-            $pageXML->load($page);
-            $this->addPage($pageXML);
+            if ($page->nodeType == XML_ELEMENT_NODE) {
+                $pageXML = new DataMenuPageXML();
+                $pageXML->load($page);
+                $this->addPage($pageXML);
+            }
         }
         
         $subsections = $node->getElementsByTagName(MENU_SUBSECTION_ELT);
         foreach ($subsections as $subsection) {
-            $subsectionXML = new DataMenuSubSectionXML();
-            $subsectionXML->load($subsection);
-            $this->addSubSection($subsectionXML);
+            if ($subsection->nodeType == XML_ELEMENT_NODE) {
+                $subsectionXML = new DataMenuSubSectionXML();
+                $subsectionXML->load($subsection);
+                $this->addSubSection($subsectionXML);
+            }
         }
     }
 
